@@ -26,6 +26,16 @@ namespace XadrezConsole.tabuleiro {
             pecas[posicao.linha, posicao.coluna] = p;
         }
 
+        public Peca removerPeca (Posicao posicao) {
+            if (obterPeca(posicao) == null) {
+                return null;
+            }
+            Peca aux = obterPeca(posicao);
+            aux.posicao = null;
+            this.pecas[posicao.linha, posicao.coluna]=null;
+            return aux;
+        }
+
         public bool posicaoValida(Posicao posicao) {
             if (posicao.linha<0 || posicao.linha>= this.linhas || posicao.coluna <0 || posicao.coluna >= this.colunas) {
                 return false;

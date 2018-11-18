@@ -15,7 +15,7 @@ namespace XadrezConsole.xadrez {
         }
 
         public Posicao toPosicao() {
-            return new Posicao(8 - this.linha, coluna - 'a');
+            return new Posicao(8 - this.linha, coluna - 'A');
         }
     }
 }
