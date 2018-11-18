@@ -14,5 +14,9 @@ namespace XadrezConsole.tabuleiro {
         public Peca obterPeca(int linha, int coluna) {
             return pecas[linha, coluna];
         }
+
+        public void adicionarPeca (Peca p, Posicao posicao) {
+            pecas[posicao.linha, posicao.coluna] = p;
+        }
     }
 }
