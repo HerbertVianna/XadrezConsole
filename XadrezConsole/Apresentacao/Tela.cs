@@ -30,9 +30,10 @@ namespace XadrezConsole.apresentacao {
                     Tela.imprimirPeca(tab.obterPeca(i, j));
                 }
                 Console.WriteLine();
+                Console.BackgroundColor = fundoOriginal;
             }
             Console.WriteLine("  A B C D E F G H");
-            Console.BackgroundColor = fundoOriginal;
+            
         }
 
         public static void imprimirPeca(Peca peca) {
