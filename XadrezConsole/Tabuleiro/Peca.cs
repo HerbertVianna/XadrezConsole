@@ -1,5 +1,5 @@
 ﻿namespace XadrezConsole.tabuleiro {
-    class Peca {
+    abstract class Peca {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
         public int qtdMovimentos { get; protected set; }
@@ -15,5 +15,11 @@
         public void incrementarQtdMovimentos() {
             this.qtdMovimentos++;
         }
+
+        public bool movimentoPossivel(Posicao pos) {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }

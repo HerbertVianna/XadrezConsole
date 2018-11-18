@@ -24,6 +24,8 @@ namespace XadrezConsole.tabuleiro {
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
             pecas[posicao.linha, posicao.coluna] = p;
+            p.posicao = posicao;
+
         }
 
         public Peca removerPeca (Posicao posicao) {
