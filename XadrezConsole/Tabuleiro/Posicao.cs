@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XadrezConsole.Tabuleiro {
+namespace XadrezConsole.tabuleiro {
     class Posicao {
         public int linha { get; set; }
         public int coluna { get; set; }
