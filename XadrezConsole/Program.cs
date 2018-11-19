@@ -16,9 +16,8 @@ namespace XadrezConsole {
                     try {
                         Console.Clear();
                         Tela.imprimirPartida(partida);
-                        
 
-
+                        Console.WriteLine();
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
                         partida.validarPosicaoOrigem(origem);
@@ -40,14 +39,13 @@ namespace XadrezConsole {
                     }
 
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
             }
 
-            //PosicaoXadrez pos = new PosicaoXadrez('c', 7);
-            //Console.WriteLine(pos);
-            //Console.WriteLine(pos.toPosicao());
             Console.ReadLine();
         }
     }
