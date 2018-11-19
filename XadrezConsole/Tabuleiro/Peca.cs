@@ -1,4 +1,6 @@
-﻿namespace XadrezConsole.tabuleiro {
+﻿using System;
+
+namespace XadrezConsole.tabuleiro {
     abstract class Peca {
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
@@ -38,5 +40,8 @@
             return movimentosPossiveis()[posicao.linha, posicao.coluna];
         }
 
+        internal void decrementarQtdMovimento() {
+            qtdMovimentos--;
+        }
     }
 }
